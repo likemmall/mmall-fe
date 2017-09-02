@@ -1,0 +1,25 @@
+/*
+ * @Author: like 
+ * @Date: 2017-09-01 21:04:45 
+ * @Last Modified by: like
+ * @Last Modified time: 2017-09-02 11:39:22
+ */
+.m-nav-side{
+    float: left;
+    width: 130px;
+    min-height: 100px;
+}
+.m-nav-side .nav-item{
+    line-height: 25px;
+    font-size: 13px;
+}
+.m-nav-side .nav-item a{
+    color: #888;
+}
+.m-nav-side .nav-item.active a{
+    color: #c60023;
+}
+.m-content.with-nav{
+    float: left;
+    width: 950px;
+}

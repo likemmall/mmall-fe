@@ -4,6 +4,8 @@
   "description": "mmall项目",
   "main": "index.js",
   "dependencies": {
+    "font-awesome": "^4.7.0",
+    "hogan": "^1.0.2",
     "webpack": "^1.15.0"
   },
   "devDependencies": {
@@ -17,8 +19,8 @@
     "webpack-dev-server": "^1.16.5"
   },
   "scripts": {
-    "dev":"webpack-dev-server --inline --port 8088",
-    "dist":"webpack -p",
+    "dev": "webpack-dev-server --inline --port 8088",
+    "dist": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

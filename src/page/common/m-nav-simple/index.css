@@ -1,0 +1,17 @@
+/*
+ * @Author: like 
+ * @Date: 2017-08-31 16:30:09 
+ * @Last Modified by: like
+ * @Last Modified time: 2017-09-01 14:07:30
+ */
+.m-nav-simple{
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+}
+.m-nav-simple .logo{
+    font-size: 26px;
+    font-weight: bold;
+    color: #CC4C5D;
+}

@@ -2,17 +2,18 @@
  * @Author: like 
  * @Date: 2017-08-30 15:46:35 
  * @Last Modified by: like
- * @Last Modified time: 2017-08-30 19:13:44
+ * @Last Modified time: 2017-09-02 11:51:41
  */
 var webpack = require('webpack')
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 //获取html-webpack-plugin 参数的方法
-var getHtmlConfig = function (name) {
+var getHtmlConfig = function (name,title) {
     return {
         template: './src/view/' + name + '.html',
         filename: 'view/' + name + '.html',
+        title:title,
         inject: true,
         hash: true,
         chunks: ['common',name]
@@ -21,9 +22,10 @@ var getHtmlConfig = function (name) {
 //weboack config
 var config = {
     entry: {
-        'common': ['./src/page/common/index.js','webpack-dev-server/client?http"//localhost:8088/'],
+        'common': ['./src/page/common/index.js'],//通用模块
         'index': ['./src/page/index/index.js'],
-        'login': ['./src/page/login/index.js']
+        'login': ['./src/page/login/index.js'],
+        'result': ['./src/page/result/index.js'],
     },
     output: {
         path: './dist',//存储文件用的路径
@@ -40,22 +42,36 @@ var config = {
                 loader: ExtractTextPlugin.extract("style-loader", "css-loader")
             },
             {
-                test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,
+                test: /\.(gif|png|jpg|woff|svg|eot|ttf|ico)\??.*$/,
                 loader: "url-loader?limit=100&name=resource/[name].[ext]"
             },
+            {
+                test: /\.string$/,
+                loader: "html-loader"
+            },
         ]
+    },
+    resolve:{
+        alias:{
+            node_modules:__dirname+'/node_modules',
+            util:__dirname + '/src/util',
+            page:__dirname + '/src/page',
+            service:__dirname + '/src/service',
+            image:__dirname + '/src/image'
+        }
     },
     plugins: [
         //独立通用模块到js/base.js
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'common',
-            filemame: 'js/base.js'   //输出目录
+            name: 'common',//通用模块
+            filename: 'js/base.js'   //输出目录
         }),
         //css单独打包
         new ExtractTextPlugin("css/[name].css"),
         //html模板的处理
-        new HtmlWebpackPlugin(getHtmlConfig('index')),
-        new HtmlWebpackPlugin(getHtmlConfig('login'))
+        new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('login','用户登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('result','操作结果'))
     ]
 };
 

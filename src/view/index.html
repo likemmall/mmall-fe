@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<%= require('html-loader!./layout/html-head.html') %>
+
+<head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title><%= htmlWebpackPlugin.options.title%>-happymmall</title>
+    
+</head>
+
 <body>
-    <p>hello -server</p>
-    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <%= require('html-loader!./layout/m-nav.html') %>
+    <%= require('html-loader!./layout/m-header.html') %>
+    <div class="page-wrap g-w">
+            <%= require('html-loader!./layout/m-nav-side.html') %>
+            <div class="m-content with-nav">content</div> 
+    </div>
+
+    
+    <%= require('html-loader!./layout/m-footer.html') %>
 </body>
 
 </html>

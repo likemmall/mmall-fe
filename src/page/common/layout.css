@@ -2,7 +2,7 @@
  * @Author: like 
  * @Date: 2017-08-31 15:22:17 
  * @Last Modified by: like
- * @Last Modified time: 2017-09-01 20:18:12
+ * @Last Modified time: 2017-09-04 11:56:32
  */
  /*css reset*/
  *{
@@ -26,6 +26,9 @@ label{
 }
 input[type='checkbox']{
     cursor: pointer;
+}
+input{
+    outline: none;
 }
 a{
     text-decoration: none;
@@ -65,7 +68,6 @@ color: #c60023;
     border: none;
     background-color:#c60023;
     font-size: 17px;
-    font-weight: bold;
     color: #fff;
     outline: none;
     cursor: pointer;
@@ -76,43 +78,74 @@ color: #c60023;
     font-size: 12px;
     padding: 0 10px;
 }
-.u-loading{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin: 0 auto;
-    margin-top:100px;
-    position: relative;
-    border:5px solid lightgreen;
-    -webkit-animation: turn 2s linear infinite;
+
+/* loading动画 */
+#caseBlanche {
+    height : 60px;
+    width : 60px;
+    position : relative;
+    margin: 20px auto 0;
+  }
+  #caseBlanche #load {
+    color : #c60023;
+    font-family : calibri;
+    text-align: center;
+    line-height:60px;
+  }
+  #test {
+    height : 16px;
+    width : 16px;
+    position : absolute;
+    background-color : #c60023;
+    border-radius : 50%;
+    top :0px;
+    left : 0px;
+  }
+  #rond {
+    position :absolute;
+    top: 0;
+    left: 0;
+    height  : 60px;
+    width : 60px;
+    border : 2px solid #c60023;
+    border-radius : 50%;
+    animation : rond 2s infinite;
+    -webkit-animation : rond 2s infinite;
+  }
+  
+  @keyframes rond {
+    0% {transform : rotate(0deg);}
+    100% {transform : rotate(360deg);}
+  }
+  
+  @-webkit-keyframes rond {
+    0% {-webkit-transform : rotate(0deg);}
+    100% {-webkit-transform : rotate(360deg);}
+  }
+
+/* 面包屑导航 */
+.crumb{
+    height: 50px;
+    line-height: 50px;
+    background-color: #eee;
+    border-top: 2px #c60023 solid;
+    margin-bottom: 20px;
+    font-size: 14px;
 }
-.u-loading span{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: lightgreen;
-    position: absolute;
-    left: 50%;
-    margin-top: -15px;
-    margin-left: -15px;
-    -webkit-animation: changeBgColor 2s linear infinite;
+/* panel */
+.panel{
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
 }
-@-webkit-keyframes changeBgColor{
-    0%{
-        background: lightgreen;
-    }
-    100%{
-        background: lightblue;
-    }
+.panel .panel-title{
+    padding: 10px;
+    font-size: #666;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
 }
-@-webkit-keyframes turn{
-    0%{
-        -webkit-transform: rotate(0deg);
-        border-color: lightgreen;
-    }
-    100%{
-        -webkit-transform: rotate(360deg);
-        border-color: lightblue;
-    }
+.panel .panel-body{
+    padding: 10px;
+    overflow: hidden;
 }

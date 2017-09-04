@@ -1,0 +1,21 @@
+<div class="user-info">
+    <div class="form-line">
+        <span class="label">原始密码：</span>
+        <input type="password" class="text" id="passwordOld" autocomplete="off" />
+    </div>
+    <div class="form-line">
+        <span class="label">新密码：</span>
+        <input type="password" class="text" id="passwordNew" autocomplete="off" />
+    </div>
+    <div class="form-line">
+        <span class="label">确认密码：</span>
+        <input type="password" class="text" id="passwordNewConfirm" autocomplete="off" />
+    </div>
+    <div class="error-item">
+            <i class="fa fa-minus-circle error-icon"></i>
+            <p class="err-message">error</p>
+        </div>
+    <div class="form-line">
+        <a href="javascript:;" class="u-btn u-btn-mini" id="btn-submit">提交修改</a>
+    </div>
+</div>

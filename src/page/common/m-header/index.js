@@ -2,7 +2,7 @@
  * @Author: like 
  * @Date: 2017-09-01 20:00:20 
  * @Last Modified by: like
- * @Last Modified time: 2017-09-01 20:32:48
+ * @Last Modified time: 2017-09-04 22:09:30
  */
 'use strict'
 require('./index.css')
@@ -12,13 +12,14 @@ var _mm = require('util/mm.js')
 var header = {
     init:function(){
         this.bindEvent()
+        this.onLoad()
     },
     /*加载搜索框的时候，检查url是否带有keyword参数，如果有，就
     把搜索框里内容设为keyword*/
     onLoad:function(){
         var keyword = _mm.getUrlParam('keyword')
         if(keyword){
-            $('#earch-input').val(keyword)
+            $('#search-input').val(keyword)
         }
     },
     bindEvent:function(){

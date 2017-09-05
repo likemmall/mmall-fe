@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%= require('html-loader!./layout/head-common.html') %>
+        <title>
+            <%= htmlWebpackPlugin.options.title%>-happymmall</title>
+</head>
+
+<body>
+    <%= require('html-loader!./layout/m-nav.html') %>
+        <%= require('html-loader!./layout/m-header.html') %>
+            <!-- 面包屑导航 -->
+            <div class="crumb">
+                <div class="g-w">
+                    <div class="crum-con">
+                        <a href="./index.html" class="u-link">MMall > </a>
+                        <span></span>
+                        <span class="u-link-text"><%= htmlWebpackPlugin.options.title%></span>
+                    </div>
+                </div>
+            </div>
+            <div class="page-wrap g-w">
+                <%= require('html-loader!./layout/m-loading.html') %>
+                <!-- detail -->
+            </div>
+            <%= require('html-loader!./layout/m-footer.html') %>
+</body>
+
+</html>

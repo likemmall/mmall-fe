@@ -2,7 +2,7 @@
  * @Author: like 
  * @Date: 2017-08-31 15:22:17 
  * @Last Modified by: like
- * @Last Modified time: 2017-09-04 11:56:32
+ * @Last Modified time: 2017-09-05 12:10:47
  */
  /*css reset*/
  *{
@@ -80,13 +80,13 @@ color: #c60023;
 }
 
 /* loading动画 */
-#caseBlanche {
+#m-loading {
     height : 60px;
     width : 60px;
     position : relative;
-    margin: 20px auto 0;
+    margin: 20px auto;
   }
-  #caseBlanche #load {
+  #m-loading #load {
     color : #c60023;
     font-family : calibri;
     text-align: center;

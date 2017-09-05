@@ -2,7 +2,7 @@
  * @Author: like 
  * @Date: 2017-08-30 15:46:35 
  * @Last Modified by: like
- * @Last Modified time: 2017-09-04 14:36:24
+ * @Last Modified time: 2017-09-04 21:59:40
  */
 var webpack = require('webpack')
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -24,6 +24,8 @@ var config = {
     entry: {
         'common': ['./src/page/common/index.js'],//通用模块
         'index': ['./src/page/index/index.js'],
+        'list': ['./src/page/list/index.js'],
+        'detail': ['./src/page/detail/index.js'],
         'user-login': ['./src/page/user-login/index.js'],
         'user-register': ['./src/page/user-register/index.js'],
         'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
@@ -75,6 +77,8 @@ var config = {
         new ExtractTextPlugin("css/[name].css"),
         //html模板的处理
         new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('list','商品列表页')),
+        new HtmlWebpackPlugin(getHtmlConfig('detail','商品详情页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register','用户注册')),
         new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),

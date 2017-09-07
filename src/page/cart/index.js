@@ -2,7 +2,7 @@
  * @Author: like 
  * @Date: 2017-09-05 14:34:17 
  * @Last Modified by: like
- * @Last Modified time: 2017-09-06 15:02:48
+ * @Last Modified time: 2017-09-06 15:15:41
  * detail
  */
 'use strict'
@@ -133,7 +133,7 @@ var page = {
         $(document).on('click', '.btn-submit', function (event) {
             // 总价大于0，进行提交
             if(_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0){
-                window.location.href = './confirm.html'
+                window.location.href = './order-confirm.html'
             }else{
                 _mm.errorTips('请选择商品后再提交')
             }

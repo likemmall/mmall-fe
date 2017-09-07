@@ -1,0 +1,82 @@
+/*
+ * @Author: like 
+ * @Date: 2017-09-04 22:18:34 
+ * @Last Modified by: like
+ * @Last Modified time: 2017-09-05 11:45:47
+ * list
+ */
+ /* 排序按钮 */
+ .sort-con {
+    overflow: auto;
+ }
+ .sort-con .sort-item{
+     float: left;
+     position: relative;
+     padding: 0 8px;
+     height: 24px;
+     line-height: 22px;
+     border: 1px solid #ccc;
+     margin-right: -1px;
+     background-color: #fff;
+     color: #333;
+     cursor: pointer;
+ }
+ .sort-con .sort-item.active{
+    background-color: #c60023;
+    border: 1px solid #c60023;
+    color: #fff;
+ }
+ .sort-con .sort-item .fa-sort-desc{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+ }
+ .sort-con .sort-item.asc .fa-sort-desc{
+     opacity: .6;
+ }
+ .sort-con .sort-item.desc .fa-sort-asc{
+     opacity: .6;
+ }
+ /* 列表 */
+ .p-list-con{
+  overflow: auto;
+   margin-right:-20px;
+   margin-top: 10px; 
+ }
+ .p-list-con .p-item{
+    position: relative;
+    float: left;
+    padding: 10px;
+    width: 180px;
+    margin-top: 10px; 
+    margin-right: 20px;
+    background-color:#fff;
+ }
+ .p-list-con .p-item .p-img-con{
+   margin-bottom: 10px;
+    width: 180px;
+    height: 180px;
+ }
+ .p-list-con .p-img-con img{
+    width: 100%;
+ }
+ .p-list-con .p-price-con{
+     line-height: 30px;
+     height: 30px;
+ }
+ .p-list-con .p-price-con .p-price{
+     font-size: 16px;
+     color: #e7380b;
+ }
+ .p-list-con .p-name-con{
+     height: 40px;
+     overflow: hidden;
+ }
+ .p-list-con .p-name-con .p-name{  
+     line-height: 20px;
+   color: #888;
+ }
+ .p-list-con .p-name-con .p-name:hover{
+   
+     color: #666;
+ }

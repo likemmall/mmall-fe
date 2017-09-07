@@ -1,0 +1,30 @@
+/*
+ * @Author: like 
+ * @Date: 2017-09-01 14:26:16 
+ * @Last Modified by: like
+ * @Last Modified time: 2017-09-01 14:36:17
+ */
+.m-nav{
+    background-color:#eee;
+    height: 30px;
+    line-height: 30px;
+}
+/*用户部分*/
+.m-nav .user{
+    float: left;
+}
+/*用户已经登录*/
+.m-nav .user.is-login{
+    display: none;
+}
+.m-nav .user .u-link{
+    margin-right: 5px;
+}
+/*导航链接部分*/
+.m-nav .nav-list{
+    float: right;
+}
+.m-nav .nav-item{
+    display: inline-block;
+    margin-left: 5px;
+}

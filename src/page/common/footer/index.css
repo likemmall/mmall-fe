@@ -1,0 +1,21 @@
+/*
+ * @Author: like 
+ * @Date: 2017-09-01 16:41:25 
+ * @Last Modified by: like
+ * @Last Modified time: 2017-09-01 19:55:37
+ */
+ .m-footer{
+    padding-bottom: 10px;
+ }
+ .m-footer .links .u-link{
+     padding: 0 10px;
+ }
+.m-footer .links, 
+.m-footer .copyright{
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+}
+
+/* .copyright{
+} */

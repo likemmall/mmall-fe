@@ -1,0 +1,151 @@
+/*
+ * @Author: like 
+ * @Date: 2017-08-31 15:22:17 
+ * @Last Modified by: like
+ * @Last Modified time: 2017-09-05 12:10:47
+ */
+ /*css reset*/
+ *{
+     margin: 0;
+     padding: 0;
+ }
+body{
+    min-width: 1080px;
+    background-color: #f6f6f6;
+    font: 12px/1.5 tahoma,arial,Microsoft YaHei,sans-serif;
+}
+li{
+    list-style: none;
+}
+img{
+    display: block;
+    border: none;
+}
+label{
+    cursor: pointer;
+}
+input[type='checkbox']{
+    cursor: pointer;
+}
+input{
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+/* 定宽布局 */
+.g-w{
+    width: 1080px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.g-large .g-w{
+    width: 1600px;
+}
+/*全局通用样式*/
+/*隐藏类*/
+.g-hidden{
+    display: none;
+}
+/*超链接样式*/
+.u-link{
+    color: #999;
+    cursor: pointer;
+}
+.u-link:hover{
+color: #c60023;
+}
+.u-link-text{
+    color: #999;
+}
+.u-btn{
+    display: inline-block;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    border: none;
+    background-color:#c60023;
+    font-size: 17px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+.u-btn-mini{
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+/* loading动画 */
+#m-loading {
+    height : 60px;
+    width : 60px;
+    position : relative;
+    margin: 20px auto;
+  }
+  #m-loading #load {
+    color : #c60023;
+    font-family : calibri;
+    text-align: center;
+    line-height:60px;
+  }
+  #test {
+    height : 16px;
+    width : 16px;
+    position : absolute;
+    background-color : #c60023;
+    border-radius : 50%;
+    top :0px;
+    left : 0px;
+  }
+  #rond {
+    position :absolute;
+    top: 0;
+    left: 0;
+    height  : 60px;
+    width : 60px;
+    border : 2px solid #c60023;
+    border-radius : 50%;
+    animation : rond 2s infinite;
+    -webkit-animation : rond 2s infinite;
+  }
+  
+  @keyframes rond {
+    0% {transform : rotate(0deg);}
+    100% {transform : rotate(360deg);}
+  }
+  
+  @-webkit-keyframes rond {
+    0% {-webkit-transform : rotate(0deg);}
+    100% {-webkit-transform : rotate(360deg);}
+  }
+
+/* 面包屑导航 */
+.crumb{
+    height: 50px;
+    line-height: 50px;
+    background-color: #eee;
+    border-top: 2px #c60023 solid;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+/* panel */
+.panel{
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+.panel .panel-title{
+    padding: 10px;
+    font-size: #666;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+.panel .panel-body{
+    padding: 10px;
+    overflow: hidden;
+}

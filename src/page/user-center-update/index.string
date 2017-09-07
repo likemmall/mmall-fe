@@ -1,0 +1,29 @@
+<div class="user-info">
+    <div class="form-line">
+        <span class="label">用户名：</span>
+        <span class="text" id="username" autocomplete="off"> {{username}}</span>
+    </div>
+    <div class="form-line">
+        <span class="label">电话：</span>
+        <input type="text" class="text" id="phone" autocomplete="off" value={{phone}} />
+    </div>
+    <div class="form-line">
+        <span class="label">邮箱：</span>
+        <input type="text" class="text" id="email" autocomplete="off" value={{email}} />
+    </div>
+    <div class="form-line">
+        <span class="label">密保问题：</span>
+        <input type="text" class="text" id="question" autocomplete="off" value={{question}} />
+    </div>
+    <div class="form-line">
+        <span class="label">密保答案：</span>
+        <input type="text" class="text" id="answer" autocomplete="off" value={{answer}} />
+    </div>
+    <div class="error-item">
+            <i class="fa fa-minus-circle error-icon"></i>
+            <p class="err-message">error</p>
+        </div>
+    <div class="form-line">
+        <a href="javascript:;" class="u-btn u-btn-mini" id="btn-submit">提交修改</a>
+    </div>
+</div>

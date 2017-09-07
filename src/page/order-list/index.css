@@ -1,0 +1,78 @@
+/*
+ * @Author: like 
+ * @Date: 2017-09-06 15:56:42 
+ * @Last Modified by: like
+ * @Last Modified time: 2017-09-07 12:09:42
+ * order-list
+ */
+ .order-list-table{
+     margin-bottom: 20px;
+ }
+.header{
+    height: 40px;
+    line-height: 40px;
+    background-color:#eee;
+    padding-left: 10%;
+}
+.header .header-item{
+    float: left;
+    font-weight: bold;
+    color: #666;
+    text-align: center;
+    width: 15%;
+}
+.header .header-item:nth-of-type(1){
+    width:55%;
+    text-align: left;
+}
+.content{
+    width: 100%;
+    border-collapse:collapse; 
+}
+tbody tr{
+    border-bottom:1px #e6e6e6 solid;
+}
+.content thead tr{
+    background-color: #eee;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.content th{
+    font-weight: normal;
+    color: #666;
+}
+.content th .order-num,
+.content th .total-price,
+.content th  .view-detail{
+    font-weight: bold;
+}
+.content th .total-price{
+    color:#c60023;
+}
+.content td:nth-of-type(1){
+    width: 65%;
+}
+.content td:nth-of-type(3){
+    width: 10%;
+}
+.content td:nth-of-type(4){
+    width: 10%;
+}
+
+.content tbody{
+    background-color: #f8f8f8;
+}
+.content tbody a{
+    display: inline-block;
+    vertical-align: middle;
+}
+.content tbody .p-img{
+    margin: 10px;
+    width: 100px;
+}
+.content tbody img{
+    width: 80px;
+    height: 80px;
+    border:1px #eee solid;
+}

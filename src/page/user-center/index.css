@@ -1,0 +1,16 @@
+/*
+ * @Author: like 
+ * @Date: 2017-09-03 17:34:36 
+ * @Last Modified by: like
+ * @Last Modified time: 2017-09-04 10:52:12
+ * userCenter 
+ */
+.form-line{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.form-line .label{
+    display: inline-block;
+    width: 80px;
+}

@@ -2,17 +2,20 @@
  * @Author: like 
  * @Date: 2017-08-30 15:46:35 
  * @Last Modified by: like
- * @Last Modified time: 2017-09-07 15:46:06
+ * @Last Modified time: 2017-09-07 17:49:57
  */
 var webpack = require('webpack')
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 
+// 环境变量配置，dev / online
+var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
 //获取html-webpack-plugin 参数的方法
 var getHtmlConfig = function (name,title) {
     return {
         template: './src/view/' + name + '.html',
         filename: 'view/' + name + '.html',
+        favicon:'./favicon.ico',
         title:title,
         inject: true,
         hash: true,
@@ -28,6 +31,7 @@ var config = {
         'detail': ['./src/page/detail/index.js'],
         'cart': ['./src/page/cart/index.js'],
         'payment': ['./src/page/payment/index.js'],
+        'about': ['./src/page/about/index.js'],
         'order-confirm': ['./src/page/order-confirm/index.js'],
         'order-list': ['./src/page/order-list/index.js'],
         'order-detail': ['./src/page/order-detail/index.js'],
@@ -40,8 +44,8 @@ var config = {
         'result': ['./src/page/result/index.js'],
     },
     output: {
-        path: './dist',//存储文件用的路径
-        publicPath:'/dist',//访问文件时用的路径
+        path: __dirname + '/dist/',//存储文件用的路径
+        publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.happymmall.com/mmall-fe/dist/',//访问文件时用的路径
         filename: 'js/[name].js'
     },
     externals: {
@@ -86,6 +90,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('detail','商品详情页')),
         new HtmlWebpackPlugin(getHtmlConfig('cart','购物车')),
         new HtmlWebpackPlugin(getHtmlConfig('payment','支付')),
+        new HtmlWebpackPlugin(getHtmlConfig('about','关于mmall')),
         new HtmlWebpackPlugin(getHtmlConfig('order-confirm','订单确认页')),
         new HtmlWebpackPlugin(getHtmlConfig('order-list','订单列表')),
         new HtmlWebpackPlugin(getHtmlConfig('order-detail','订单详情')),
@@ -98,5 +103,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','找回密码'))
     ]
 };
-
+if('dev' === WEBPACK_ENV){//判断是开发环境
+    config.entry.common.push('webpack-dev-server/client?http://localhost:8088/')
+}
 module.exports = config;
